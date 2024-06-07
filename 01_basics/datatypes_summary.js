@@ -27,3 +27,28 @@ const myFunction = function () {
 // how to find data type of variable
 console.log(typeof bigNumber);
 console.log(typeof myFunction);
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// stack (primitive), Heap (non-primitive types)
+
+let myYoutubename = "martian man"
+
+let anothername = myYoutubename
+anothername = "omni man"
+
+console.log(myYoutubename)
+console.log(anothername)
+
+let userOne = {
+  email: "useremail@gg.com",
+  upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "omni@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
