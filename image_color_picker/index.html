@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image color picker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- =====demo image -->
+    <div class="image-container">
+      <img id="image" src="/image_color_picker/margin-calll.jpg" alt="">
+    </div>
+<!-- ============the two buttons which are functional -->
+    <div class="btns-container">
+      <input type="file" id="file" accesskey="image/*">
+      <label for="file">Open A Photo</label>
+      <button id="pick-color">Pick Color</button>
+    </div>
+
+    <div id="error" class="hide"></div>
+    <!-- =============the result which will show the colors generated from image=== -->
+    <div id="result" class="hide">
+      <div>
+        <input type="text" id="hex-val-ref">
+        <button onclick="copy('hex-val-ref')">
+          <i class="fa-regular fa-copy"></i>
+        </button>
+      </div>
+
+      <div>
+        <input type="text" id="rgb-val-ref">
+        <button onclick="copy('rgb-val-ref')">
+          <i class="fa-regular fa-copy"></i>
+        </button>
+      </div>
+
+      <div id="picked-color-ref"></div>
+    </div>
+    <!-- ===========text to show when color codes are copied to clipbord -->
+    <div id="custom-alert">Color code Copied!</div>
+  </div>
+
+
+
+  <!-- ======js === -->
+  <script src="script.js"></script>
+</body>
+</html>
