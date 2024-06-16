@@ -22,3 +22,27 @@ function sumOfNumbers(sumNumbers) {
 }
 
 console.log(sumOfNumbers(numbers));
+
+// function that returns maximum number in the array 
+function findMaxNumber(arr){
+  return Math.max(...arr)
+}
+console.log(findMaxNumber(numbers));
+
+// function returns new array with duplicate numbers removed
+let digits = [1, 2, 2, 3, 4, 5, 6, 6, 7, 9, 8, 9, 10];
+function removeDuplicates(arr){
+  return [...new Set(arr)]
+}
+console.log(removeDuplicates(digits));
+
+// new operator 
+function Car(make, model, year){
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car('Eagle', 'Talon Tsi', 1993)
+
+console.log(car1.make);
