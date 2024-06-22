@@ -24,4 +24,33 @@ function capitalizedWords(str) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
-console.log(capitalizedWords("hey"));
+const capString = ["hello", "context", "jumbo"];
+console.log(capitalizedWords("hello"));
+
+// ?now as a arrow function
+const capWords = (str) =>
+  str
+    .split("")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("");
+
+console.log(capWords("spiderman"));
+
+// *Write a function that takes an array of objects and a property name as input, and returns a new array containing only the objects that have a truthy value for the specified property.
+
+const people = [
+  { name: "Alice", age: 25, employed: true },
+  { name: "Bob", age: 30, employed: false },
+  { name: "Charlie", age: 35, employed: true },
+  { name: "David", age: 40, employed: false },
+  { name: "Eve", age: 45, employed: true },
+];
+
+function filterObjects(arr, prop) {
+  return arr.filter((obj) => obj[prop]);
+}
+const employedPeople = filterObjects(people, "employed");
+console.log(employedPeople);
+
+
+
