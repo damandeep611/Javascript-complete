@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nodes in DOM</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body style="background-color: #212121; color: #fff;">
+
+
+
+  <!-- ? custom javascript -->
+  <script>
+    // js
+    const firstDiv = document.createElement('div');
+    console.log(firstDiv);
+    firstDiv.className = "main";
+    firstDiv.id = Math.round(Math.random() * 10 + 1);
+    firstDiv.setAttribute('title', "generated title");
+    firstDiv.style.backgroundColor = "green";
+    firstDiv.style.padding = "12px";
+    // firstDiv.innerText = "Martian here comes";
+     const addText = document.createTextNode("Here comes Martian");
+     firstDiv.appendChild(addText);
+
+     document.body.appendChild(firstDiv);
+
+  
+  </script>
+</body>
+</html>

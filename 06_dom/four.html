@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom edit and modification</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body style="background-color: #212121; color: #fff;">
+  <ul class="language">
+    <li>Javascript</li>
+  </ul>
+
+  <script>
+    function addLanguage(langName){
+      const li = document.createElement('li');
+      li.innerHTML = `${langName}`
+      document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage("python")
+    addLanguage("typescript")
+
+
+// the following function does the same task as above which is to add a html element to the html document tree but the following method does it in a more optimized way so that the it does'nt traverse and we also prefer to use appendchild() instead of innerText as append child is better option to use in bigger projects 
+    function addOptiLanguage(langName){
+      const li = document.createElement('li');
+      li.appendChild(document.createTextNode(langName))
+      document.querySelector('.language').appendChild(li)
+    }
+
+    addOptiLanguage('golang')
+  </script>
+</body>
+</html>
