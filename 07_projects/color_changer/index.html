@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Changer project</title>
+  <style>
+    .color-box {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .button {
+      padding: 2rem;
+      margin: 1rem;
+      border: 2px solid black;
+    }
+    #grey {
+      background-color: gray;
+    }
+    #white {
+      background-color: rgb(255, 255, 255);
+    }
+    #blue {
+      background-color: blue;
+    }
+    #yellow {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">More</a>
+  </nav>
+
+  <div class="canvas">
+    <h1>Color Scheme Switcher</h1>
+    <div class="color-box">
+      <span class="button" id="grey">Grey</span>
+    <span class="button" id="white">White</span>
+    <span class="button" id="blue">Blue</span>
+    <span class="button" id="yellow">yellow</span>
+    </div>
+    <h2>Try clicking on one of the color cubes </h2>
+    <span>to see the change in color of background</span>
+  </div>
+<!-- javascript  -->
+  <script src="script.js"></script>
+</body>
+</html>

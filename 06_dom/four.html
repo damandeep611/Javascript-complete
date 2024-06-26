@@ -28,7 +28,7 @@
     addLanguage("typescript")
 
 
-// the following function does the same task as above which is to add a html element to the html document tree but the following method does it in a more optimized way so that the it does'nt traverse and we also prefer to use appendchild() instead of innerText as append child is better option to use in bigger projects 
+// the following function does the same task as above which is to add a html element to the html document tree but the following method does it in a more optimized way so that the it does'nt traverse and we also prefer to use appendchild() instead of innerHTML as append child is better option to use in bigger projects 
     function addOptiLanguage(langName){
       const li = document.createElement('li');
       li.appendChild(document.createTextNode(langName))
@@ -36,6 +36,25 @@
     }
 
     addOptiLanguage('golang')
+
+
+    // how to edit DOM 
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "sanskrit"
+    const newli = document.createElement("li");
+    newli.textContent = "sanskrit"
+    secondLang.replaceWith(newli)
+
+
+    // one more edit example 
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    // remove
+
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove()
   </script>
 </body>
 </html>
