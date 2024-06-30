@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Api Requests</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+  <h1>Api requests</h1>
+
+
+  <script>
+    
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+      console.log(xhr.readyState);
+      if(xhr.readyState === 4){
+        // here we have used Json.parse to convert the incoming api data in the form of string to the object form so that we can call specific data using api calls 
+        const data = JSON.parse(this.responseText)
+        console.log(data)
+        console.log(data.followers)
+      }
+    }
+   
+    xhr.send()
+  </script>
+</body>
+</html>
