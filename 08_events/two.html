@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events in js</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+  <h1>Martian </h1>
+  <button id="stop">Stop</button>
+
+  <!-- ======js == -->
+  <script>
+    const changeText = function(){
+      document.querySelector('h1').innerHTML = "To Infinity and beyond"
+    }
+    const btnColor = function(){
+      document.querySelector('button').style.padding = '15px'
+    }
+    const changeh1 = setTimeout(changeText, 2000);
+
+    document.querySelector('#stop').addEventListener('click', function(){
+      clearTimeout(changeh1)
+      console.log("h1 text change stopped");
+    })
+    
+
+  </script>
+</body>
+</html>
